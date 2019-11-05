@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kalkulator Sederhana v.1</title>
+</head>
+
+<body>
+    <form name="fromkal" align="center">
+        <br>
+        <br>
+        <h1 align="center">Kalkulator Sederhana v.1</h1>
+        <br>
+        <br>
+        <p>
+            <input type="text" name="bil1" placeholder="Input bilangan 1">
+            <input type="text" name="bil2" placeholder="Input bilangan2">
+        </p>
+        <input type="button" value="+" onclick="tambah()">
+        <input type="button" value="-" onclick="kurang()">
+        <input type="button" value="/" onclick="bagi()">
+        <input type="button" value="*" onclick="kali()">
+        <input type="reset" value="reset">
+    </form>
+</body>
+
+</html>
+<script language="javascript">
+    function tambah() {
+        var bil1 = parseFloat(document.fromkal.bil1.value);
+        var bil2 = parseFloat(document.fromkal.bil2.value);
+        var jumlah = bil1 + bil2;
+        alert("Hasilnya " + jumlah);
+    }
+
+    function kurang() {
+        var bil1 = parseFloat(document.fromkal.bil1.value);
+        var bil2 = parseFloat(document.fromkal.bil2.value);
+        var jumlah = bil1 - bil2;
+        alert("Hasilnya " + jumlah);
+    }
+
+    function bagi() {
+        var bil1 = parseFloat(document.fromkal.bil1.value);
+        var bil2 = parseFloat(document.fromkal.bil2.value);
+        var jumlah = bil1 / bil2;
+        alert("Hasilnya " + jumlah);
+    }
+
+    function kali() {
+        var bil1 = parseFloat(document.fromkal.bil1.value);
+        var bil2 = parseFloat(document.fromkal.bil2.value);
+        var jumlah = bil1 * bil2;
+        alert("Hasilnya " + jumlah);
+    }
+</script>

@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title>Kalkulator Sederhana V.2</title>
+</head>
+
+<body>
+
+    <br>
+    <br>
+    <br>
+    <h1 align="center">Kalkulator Sederhana v.2</h1>
+    <br>
+    <br>
+    <br>
+
+    <div align="center">
+        <form name="form1" action="#">
+            <p>bil 1 <input type="text" name="x" /></p>
+            <p>bil 2 <input type="text" name="y" /></p>
+            <p>hasil <input type="text" name="hasil" disabled="true" /></p>
+
+            <p>operator <select name="opt"></p>
+            <option value="tambah">
+                +
+            </option>
+            <option value="kurang">
+                -
+            </option>
+            <option value="kali">
+                *
+            </option>
+            <option value="bagi">
+                /
+            </option>
+            </select>
+            <input type="button" value="HITUNG" onClick="hitung()" />
+            <input type="button" value="HAPUS" onClick="resetForm()" />
+        </form>
+</body>
+
+</html>
+
+<script language="JavaScript" type="text/javascript">
+    function hitung() {
+        var myForm = document.form1;
+        var x = eval(myForm.x.value);
+        var y = eval(myForm.y.value);
+        var pil = myForm.opt.value;
+        if (pil == "tambah") {
+            var z = x + y;
+        } else if (pil == "kurang") {
+            var z = x - y;
+        } else if (pil == "kali") {
+            var z = x * y;
+        } else if (pil == "bagi") {
+            var z = x / y;
+        }
+        myForm.hasil.value = z;
+        myForm.x.value = "";
+        myForm.y.value = "";
+    }
+
+    function resetForm() {
+        document.form1.reset();
+    }
+</script>
